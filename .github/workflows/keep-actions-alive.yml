@@ -1,0 +1,13 @@
+name: 🛡️ Keep Actions Active
+
+on:
+  # 每月 1 日 UTC 0 点执行，可根据需要修改为每天或每周
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  touch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 打个卡，防止仓库过期
+        run: echo "🤖 Keeping GitHub Actions alive $(date)"
