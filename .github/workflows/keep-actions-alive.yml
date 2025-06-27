@@ -1,7 +1,9 @@
 name: 🛡️ Keep Actions Active
 
 on:
-  # 每月 1 日 UTC 0 点执行，可根据需要修改为每天或每周
+  # 手动触发
+  workflow_dispatch:
+  # 定时触发，保持活跃
   schedule:
     - cron: '0 0 1 * *'
 
